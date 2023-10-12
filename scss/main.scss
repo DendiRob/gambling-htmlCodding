@@ -1,0 +1,52 @@
+@import './hedaer.scss';
+@import './mainContent.scss';
+
+* {
+    font-family: Lexend;
+    // &::-webkit-scrollbar {
+    //     width: 8px;               
+    // }
+    // &::-webkit-scrollbar-track {
+    //     background: rgba($color: #FFF, $alpha: .12);
+    // }
+    // &::-webkit-scrollbar-thumb {
+    //     background-color: #478BF9; 
+    //     border-radius: 4px;  
+    // }
+}
+body {
+    margin: 0;
+    padding:0 ;
+}
+.promo {
+    position: relative;
+    background: #110A1D;
+    width: 100%;
+    min-height: 1048px;
+    overflow: hidden;
+    &__glow {
+        &_linear {
+            z-index: 1;
+            position: absolute;
+            top: 120px;
+            width: 226px;
+            height: 1302px;
+            transform: rotate(-54.311deg);
+            background: linear-gradient(180deg, #478BF9 0%, rgba(71, 139, 249, 0.40) 100%);
+            opacity: 0.55;
+            filter: blur(150px);
+        }
+        &_point {
+            z-index: 1;
+            top: 542px;
+            right: -150px;
+            position: absolute; 
+            width: 574px;
+            height: 574px;
+            border-radius: 574px;
+            opacity: 0.7;
+            background: linear-gradient(256deg, #478BF9 0%, #9DADF2 100%);
+            filter: blur(325px);
+        }
+    }
+}
