@@ -5,6 +5,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 250px;
     &__titleBlock {
         width: 669px;
         h1 {
@@ -40,7 +41,6 @@
     &__blog {
         width: 531px;
         height: 595px;
-        
         &_title {
             text-align: center;
             color:#FFF;
@@ -50,19 +50,27 @@
             margin-bottom: 24px;
         }
         &_articles {
-            overflow-y: scroll;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
             height: 100%;
             padding: 24px;
             padding-right: 16px;
+            margin-right: 16px;
             &-container {
+                padding-bottom: 24px;    
                 background: rgba(255, 255, 255, 0.12);
                 overflow: hidden;
                 border-radius: 100px;
                 width: 100%;
                 border: 3px solid #478BF9;
                 height: 100%;
-                padding-right: 16px;
+                &:hover {
+                    .mainContent__blog_articles {
+                        overflow-y: scroll;
+                    }
+                }
             }
+            
             &::-webkit-scrollbar {
                 width: 8px;
             }
@@ -77,13 +85,18 @@
 
             }
             &-item{
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
                 margin-bottom: 16px;
                 padding: 16px 64px;
                 background-color: #1E1231;
                 border-radius: 196px;
+                width: 331px;
                 cursor: pointer;
                 a {
                     margin: 0;
+                    display: block;
                     text-decoration: none;
                     color: #FFF;
                     font-size: 24px;
@@ -91,9 +104,11 @@
                     margin-bottom: 14px;
                 }
                 div {
+                    
                     color: rgba(255, 255, 255, 0.60);
                     font-size: 14px;
                     font-weight: 400;
+                    
                 }
                 &:hover {
                     background-color: #478BF9;

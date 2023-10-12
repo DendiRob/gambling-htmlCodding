@@ -1,28 +1,20 @@
 @import './hedaer.scss';
 @import './mainContent.scss';
+@import './footer.scss';
+
 
 * {
     font-family: Lexend;
-    // &::-webkit-scrollbar {
-    //     width: 8px;               
-    // }
-    // &::-webkit-scrollbar-track {
-    //     background: rgba($color: #FFF, $alpha: .12);
-    // }
-    // &::-webkit-scrollbar-thumb {
-    //     background-color: #478BF9; 
-    //     border-radius: 4px;  
-    // }
 }
 body {
     margin: 0;
     padding:0 ;
+    height: 100%;
 }
 .promo {
     position: relative;
     background: #110A1D;
     width: 100%;
-    min-height: 1048px;
     overflow: hidden;
     &__glow {
         &_linear {
