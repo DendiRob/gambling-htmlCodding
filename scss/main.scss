@@ -1,6 +1,7 @@
 @import './hedaer.scss';
 @import './mainContent.scss';
 @import './footer.scss';
+@import './slider.scss';
 
 
 * {
@@ -20,7 +21,8 @@ body {
         &_linear {
             z-index: 1;
             position: absolute;
-            top: 120px;
+            top: -170px;
+            left: 200px;
             width: 226px;
             height: 1302px;
             transform: rotate(-54.311deg);
@@ -29,8 +31,8 @@ body {
             filter: blur(150px);
         }
         &_point {
-            z-index: 1;
-            top: 542px;
+            z-index: 3;
+            bottom: 0;
             right: -150px;
             position: absolute; 
             width: 574px;

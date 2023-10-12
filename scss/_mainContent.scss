@@ -1,5 +1,7 @@
 .mainContent {
     margin: 0 auto;
+    position: relative;
+    z-index: 4;
     margin-top: 140px;
     max-width: 1640px;
     display: flex;
@@ -50,8 +52,7 @@
             margin-bottom: 24px;
         }
         &_articles {
-            overflow-y: hidden;
-            -webkit-overflow-scrolling: touch;
+            overflow-y: auto;
             height: 100%;
             padding: 24px;
             padding-right: 16px;
@@ -64,11 +65,7 @@
                 width: 100%;
                 border: 3px solid #478BF9;
                 height: 100%;
-                &:hover {
-                    .mainContent__blog_articles {
-                        overflow-y: scroll;
-                    }
-                }
+                
             }
             
             &::-webkit-scrollbar {

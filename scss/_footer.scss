@@ -4,7 +4,11 @@
     width: 99%;
     margin: 0 auto;
     border-bottom: none;
+    background-color: #110A1D;
+    position: relative;
+    z-index: 4;
     &__container {
+        margin: 0 auto;
         display: flex;  
         justify-content: space-between;
         width: 1640px;
@@ -12,7 +16,6 @@
     }
     nav {
         width: 600px;
-        z-index: 2;
         ul {
             display: flex;
             width: 100%;
@@ -46,12 +49,19 @@
         &_links {
             display: flex;
             justify-content: space-between;
+
             a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 width: 32px;
                 height: 32px;
                 border-radius: 100%;
                 background-color: #478BF9;
                 margin-left: 8px;
+                &:hover {
+                    background-color: #96a8f7;
+                }
             }
         }
     }
