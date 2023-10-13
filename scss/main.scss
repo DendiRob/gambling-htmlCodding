@@ -9,14 +9,16 @@
 }
 body {
     margin: 0;
-    padding:0 ;
-    height: 100%;
+    width: 100%;
+    background: #110A1D;
+    
 }
 .promo {
+    margin: 0 auto;
     position: relative;
-    background: #110A1D;
-    width: 100%;
-    overflow: hidden;
+	min-height: 100%;
+    max-width: 1920px;
+    padding: 16px 140px 0 140px;
     &__glow {
         &_linear {
             z-index: 1;
@@ -24,7 +26,7 @@ body {
             top: -170px;
             left: 200px;
             width: 226px;
-            height: 1302px;
+            height: 902px;
             transform: rotate(-54.311deg);
             background: linear-gradient(180deg, #478BF9 0%, rgba(71, 139, 249, 0.40) 100%);
             opacity: 0.55;
@@ -44,3 +46,20 @@ body {
         }
     }
 }
+@media (max-width:1750px){
+    .promo {
+        &__glow {
+            &_linear {
+                top: -170px;
+                left: 200px;
+                width: 230px;
+                height: 502px;
+
+            }
+            &_point {
+                right: 0;
+                bottom: 0;
+            }
+        } 
+     }
+  }

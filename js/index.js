@@ -19,7 +19,7 @@ new Swiper('.slider__right', {
         delay: 1,
         disableOnInteraction: false,
     },
-    speed: 5000,
+    speed: 3000,
     allowTouchMove: false,
 });
 new Swiper('.slider__middle', {

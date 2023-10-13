@@ -1,14 +1,17 @@
 .mainContent {
     margin: 0 auto;
     position: relative;
-    z-index: 4;
     margin-top: 140px;
     max-width: 1640px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100%;
     margin-bottom: 250px;
+
     &__titleBlock {
+        position: relative;
+        z-index: 3;
         width: 669px;
         h1 {
             margin: 0;
@@ -41,6 +44,8 @@
         }
     }
     &__blog {
+        position: relative;
+        z-index: 4;
         width: 531px;
         height: 595px;
         &_title {
@@ -111,6 +116,54 @@
                     background-color: #478BF9;
                     div {
                         color: #FFF;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:1915px) {
+    .mainContent {
+        &__titleBlock {
+            h1 {
+                font-size: 80px;
+            }
+            h4 {
+                font-size: 25px;
+            }
+            &_btn {
+                font-size: 20px;
+            }
+        }
+
+    }
+}
+@media (max-width:1750px) {
+    .mainContent {
+        &__titleBlock {
+            h1 {
+                font-size: 70px;
+            }
+            h4 {
+                font-size: 20px;
+            }
+            &_btn {
+                font-size: 15px;
+            }
+        }
+        &__blog {
+            width: 430px;
+            height: 495px;
+            &_title {
+                font-size: 30px;
+            }
+            &_articles {
+                &-item {
+                    width: 235px;
+                    a {
+                        font-size: 18px;
                     }
                 }
             }
