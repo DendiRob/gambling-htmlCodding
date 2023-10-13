@@ -8,7 +8,6 @@
     align-items: center;
     height: 100%;
     margin-bottom: 250px;
-
     &__titleBlock {
         position: relative;
         z-index: 3;
@@ -170,3 +169,8 @@
         }
     }
 }
+@media (max-width:1540px){
+    .mainContent {
+        margin-top: 400px;
+    }
+  }

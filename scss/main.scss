@@ -63,3 +63,23 @@ body {
         } 
      }
   }
+  @media (max-width:1540px){
+    .promo {
+        &__glow {
+            &_linear {
+                top: 150px;
+                left: 100px;
+                width: 230px;
+                height: 502px;
+
+            }
+            &_point {
+                right: 0;
+                width: 200px;
+                height: 200px;
+                bottom: 0px;
+                filter: blur(125px);
+            }
+        } 
+     }
+  }

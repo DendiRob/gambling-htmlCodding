@@ -39,7 +39,7 @@
 }
 .header__options_btn {
   margin-left: 14px;
-  padding: 14px;
+  padding: 12px;
   background: none;
   color: #fff;
   border-radius: 24px;
@@ -58,6 +58,14 @@
   margin-right: 8px;
 }
 
+@media (max-width: 1540px) {
+  .header nav {
+    display: flex;
+  }
+  .header nav ul {
+    margin: 0;
+  }
+}
 .mainContent {
   margin: 0 auto;
   position: relative;
@@ -212,6 +220,11 @@
     font-size: 18px;
   }
 }
+@media (max-width: 1540px) {
+  .mainContent {
+    margin-top: 400px;
+  }
+}
 .footer {
   border-radius: 64px 64px 0px 0px;
   border: 4px solid #478BF9;
@@ -299,6 +312,7 @@
      object-fit: cover;
 }
 .swiper__container {
+  opacity: 0.4;
   display: flex;
   width: 400px;
   justify-content: space-between;
@@ -307,6 +321,30 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
+}
+.swiper__container::before {
+  content: "";
+  position: absolute;
+  z-index: 7;
+  width: 400px;
+  height: 150px;
+  opacity: 0.9;
+  bottom: -40px;
+  left: -15px;
+  background: linear-gradient(256deg, #010201 0%, #110A1D 90%);
+  filter: blur(20px);
+}
+.swiper__container::after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  width: 400px;
+  height: 150px;
+  opacity: 0.9;
+  top: -40px;
+  left: -15px;
+  background: linear-gradient(256deg, #010201 0%, #110A1D 90%);
+  filter: blur(20px);
 }
 
 .slider__left {
@@ -328,6 +366,18 @@
   }
   .swiper__container {
     width: 250px;
+  }
+}
+@media (max-width: 1540px) {
+  .swiper {
+    height: 1040px;
+  }
+  .swiper__container {
+    rotate: 90deg;
+    opacity: 0.6;
+    top: -90px;
+    left: 40%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%);
   }
 }
 * {
@@ -382,5 +432,20 @@ body {
   .promo__glow_point {
     right: 0;
     bottom: 0;
+  }
+}
+@media (max-width: 1540px) {
+  .promo__glow_linear {
+    top: 150px;
+    left: 100px;
+    width: 230px;
+    height: 502px;
+  }
+  .promo__glow_point {
+    right: 0;
+    width: 200px;
+    height: 200px;
+    bottom: 0px;
+    filter: blur(125px);
   }
 }/*# sourceMappingURL=main.css.map */
