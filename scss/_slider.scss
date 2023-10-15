@@ -1,6 +1,9 @@
 .swiper {
     width:100%;
     height: 868px;
+    &-wrapper {
+      align-items: center;
+    }
     &-slide {
       text-align: center;
       font-size: 18px;
@@ -18,14 +21,11 @@
         }
     }
     &__container {
-      // opacity: 1;
       display: flex;
       width: 400px;
       justify-content: space-between;
-      position: absolute;
-      top: 120px;
-      left: 50%;
-      transform: translateX(-50%);  
+      position: relative;
+      align-self: center;
       z-index: 1;
       &::before {
         content: '';
@@ -35,7 +35,8 @@
         height: 150px;
         opacity: .9;
         bottom: -40px;
-        left: -15px;
+        left: 50%;
+        transform: translateX(-50%);
         background: linear-gradient(256deg, #110A1D 20%, #110A1D 90%);
         filter: blur(22px);
       }
@@ -47,7 +48,8 @@
         height: 150px;
         opacity: .9;
         top:  -40px;
-        left: -15px;
+        left: 50%;
+        transform: translateX(-50%);
         background: linear-gradient(256deg, #110A1D 20%, #110A1D 100%);
         filter: blur(22px);
       }
@@ -64,28 +66,62 @@
     opacity: 0.2;
   }
 }
-@media (max-width:1750px) {
+@media (max-width:1540px){
   .swiper {
-    height: 900px;
+    height: 150px;
     &-slide {
+      margin-bottom: 0;
+      margin-right: 7px;
+      height: 100%;
+      width: fit-content !important;
+      &-horizontal {
       img {
-        width: 70px;
+          width: 220px;
+        }
       }
     }
     &__container {
-      width: 250px;
+      width: 100%;
+      flex-direction: column;
+      opacity: 0.9;
+      &::before {
+        width: 150px;
+        height: 400px;
+        right: -50px;
+        left: auto;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &::after{
+        width: 150px;
+        height: 400px;
+        left: -50px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
     }
   }
 }
-@media (max-width:1540px){
-  .swiper {
-    height: 1040px;
+@media (max-width:705px) {
+  .swiper{
+    height: 70px;
+    &-slide {
+      img {
+        width: 50px;
+      }
+      &-horizontal {
+        img {
+          width: 110px;
+        }
+      }
+    }
     &__container {
-      rotate: 90deg;
-      opacity: 0.6;
-      top: -90px;
-      left: 40%; /* position the left edge of the element at the middle of the parent */
-      transform: translate(-50%)
+      &::before {
+        display: none;
+      }
+      &::after{
+        display: none;
+      }
     }
   }
 }
