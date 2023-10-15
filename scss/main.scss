@@ -1,7 +1,11 @@
-@import './hedaer.scss';
+@import './header.scss';
 @import './mainContent.scss';
 @import './footer.scss';
 @import './slider.scss';
+@import './media-queries/header-media';
+@import './media-queries/mainContent-media';
+@import './media-queries/footer-media';
+@import './media-queries/slider-media';
 
 
 * {
